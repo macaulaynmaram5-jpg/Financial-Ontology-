@@ -1,185 +1,1038 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://example.org/financial_analysis_enhanced.owl"
-         xmlns="http://example.org/financial_analysis_enhanced.owl#">
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns:ns1="http://www.w3.org/2002/07/owl#"
+         xmlns:ns2="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns3="http://example.org/financial_analysis_enhanced.owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xml:base="http://example.org/financial_analysis_enhanced.owl">
 
-<owl:Ontology rdf:about="http://example.org/financial_analysis_enhanced.owl"/>
+  <ns1:Ontology rdf:about="http://example.org/financial_analysis_enhanced.owl" />
 
-<owl:ObjectProperty rdf:about="#hasPractice">
-  <rdfs:domain rdf:resource="#Concept"/>
-  <rdfs:range rdf:resource="#PracticeExercise"/>
-</owl:ObjectProperty>
+  <!-- =========================
+       OBJECT PROPERTIES
+       ========================= -->
+  <ns1:ObjectProperty rdf:about="#hasPractice">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="#PracticeExercise" />
+  </ns1:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="#hasCaseStudy">
-  <rdfs:domain rdf:resource="#Concept"/>
-  <rdfs:range rdf:resource="#CaseStudy"/>
-</owl:ObjectProperty>
+  <ns1:ObjectProperty rdf:about="#hasCaseStudy">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="#CaseStudy" />
+  </ns1:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="#hasQuiz">
-  <rdfs:domain rdf:resource="#Concept"/>
-  <rdfs:range rdf:resource="#QuizQuestion"/>
-</owl:ObjectProperty>
+  <ns1:ObjectProperty rdf:about="#hasQuiz">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="#QuizQuestion" />
+  </ns1:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="#relatedTo">
-  <rdfs:domain rdf:resource="#Concept"/>
-  <rdfs:range rdf:resource="#Concept"/>
-</owl:ObjectProperty>
+  <ns1:ObjectProperty rdf:about="#relatedTo">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="#Concept" />
+  </ns1:ObjectProperty>
 
-<owl:DatatypeProperty rdf:about="#hasTheory">
-  <rdfs:domain rdf:resource="#Concept"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <!-- =========================
+       DATATYPE PROPERTIES
+       ========================= -->
+  <ns1:DatatypeProperty rdf:about="#hasTheory">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#hasExample">
-  <rdfs:domain rdf:resource="#Concept"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#hasExample">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#hasLevel">
-  <rdfs:domain rdf:resource="#Concept"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#hasDefinition">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#description">
-  <rdfs:domain rdf:resource="#PracticeExercise"/>
-  <rdfs:domain rdf:resource="#CaseStudy"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#hasLevel">
+    <ns2:domain rdf:resource="#Concept" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#title">
-  <rdfs:domain rdf:resource="#CaseStudy"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#description">
+    <ns2:domain rdf:resource="#PracticeExercise" />
+    <ns2:domain rdf:resource="#CaseStudy" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#difficulty">
-  <rdfs:domain rdf:resource="#QuizQuestion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#title">
+    <ns2:domain rdf:resource="#CaseStudy" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#questionText">
-  <rdfs:domain rdf:resource="#QuizQuestion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#difficulty">
+    <ns2:domain rdf:resource="#QuizQuestion" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#options">
-  <rdfs:domain rdf:resource="#QuizQuestion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#questionText">
+    <ns2:domain rdf:resource="#QuizQuestion" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:DatatypeProperty rdf:about="#correctAnswer">
-  <rdfs:domain rdf:resource="#QuizQuestion"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-</owl:DatatypeProperty>
+  <ns1:DatatypeProperty rdf:about="#options">
+    <ns2:domain rdf:resource="#QuizQuestion" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:Class rdf:about="#Concept">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-</owl:Class>
+  <ns1:DatatypeProperty rdf:about="#correctAnswer">
+    <ns2:domain rdf:resource="#QuizQuestion" />
+    <ns2:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </ns1:DatatypeProperty>
 
-<owl:Class rdf:about="#PracticeExercise">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-</owl:Class>
+  <!-- =========================
+       CLASSES
+       ========================= -->
+  <ns1:Class rdf:about="#Concept">
+    <ns2:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </ns1:Class>
 
-<owl:Class rdf:about="#CaseStudy">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-</owl:Class>
+  <ns1:Class rdf:about="#PracticeExercise">
+    <ns2:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </ns1:Class>
 
-<owl:Class rdf:about="#QuizQuestion">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-</owl:Class>
+  <ns1:Class rdf:about="#CaseStudy">
+    <ns2:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </ns1:Class>
 
-<owl:NamedIndividual rdf:about="#LiquidityRatios">
-  <rdf:type rdf:resource="#Concept"/>
-  <relatedTo rdf:resource="#ProfitabilityRatios"/>
-  <hasPractice rdf:resource="#LiquidityExercise2"/>
-  <hasPractice rdf:resource="#LiquidityExercise1"/>
-  <hasCaseStudy rdf:resource="#RetailChainExpansion"/>
-  <hasQuiz rdf:resource="#LiquidityQ1"/>
-  <hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liquidity ratios measure a company's ability to cover short-term obligations.</hasTheory>
-  <hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current Ratio = Current Assets / Current Liabilities</hasExample>
-  <hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</hasLevel>
-</owl:NamedIndividual>
+  <ns1:Class rdf:about="#QuizQuestion">
+    <ns2:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </ns1:Class>
 
-<owl:NamedIndividual rdf:about="#ProfitabilityRatios">
-  <rdf:type rdf:resource="#Concept"/>
-  <relatedTo rdf:resource="#LiquidityRatios"/>
-  <relatedTo rdf:resource="#DuPontAnalysis"/>
-  <hasPractice rdf:resource="#ProfitabilityExercise1"/>
-  <hasCaseStudy rdf:resource="#ManufacturingTurnaround"/>
-  <hasQuiz rdf:resource="#ProfitabilityQ1"/>
-  <hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profitability ratios measure the company's ability to generate profit relative to revenue, assets, or equity.</hasTheory>
-  <hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Net Profit Margin = Net Income / Revenue</hasExample>
-  <hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</hasLevel>
-</owl:NamedIndividual>
+  <!-- Extra descriptive classes -->
+  <ns1:Class rdf:about="#ConceptOfFinancialAnalysis">
+    <ns2:label>Concept of Financial Analysis</ns2:label>
+    <ns2:comment>Core conceptual entity describing the fundamental principles, components, and frameworks used in financial analysis.</ns2:comment>
+  </ns1:Class>
 
-<owl:NamedIndividual rdf:about="#DuPontAnalysis">
-  <rdf:type rdf:resource="#Concept"/>
-  <relatedTo rdf:resource="#ProfitabilityRatios"/>
-  <hasPractice rdf:resource="#DuPontExercise1"/>
-  <hasCaseStudy rdf:resource="#ManufacturingTurnaround"/>
-  <hasQuiz rdf:resource="#DuPontQ1"/>
-  <hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DuPont analysis decomposes ROE into multiple components for deeper insight.</hasTheory>
-  <hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROE = Profit Margin * Asset Turnover * Equity Multiplier</hasExample>
-  <hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced</hasLevel>
-</owl:NamedIndividual>
+  <ns1:Class rdf:about="#PracticeExercise">
+    <ns2:label>Practice Exercise</ns2:label>
+    <ns2:comment>Interactive exercise designed to help users practice financial analysis concepts and formulas.</ns2:comment>
+  </ns1:Class>
 
-<owl:NamedIndividual rdf:about="#LiquidityExercise1">
-  <rdf:type rdf:resource="#PracticeExercise"/>
-  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compute the current ratio for a sample company.</description>
-</owl:NamedIndividual>
+  <ns1:Class rdf:about="#CaseStudy">
+    <ns2:label>Case Study</ns2:label>
+    <ns2:comment>Realistic financial scenario used to apply analytical methods and decision-making.</ns2:comment>
+  </ns1:Class>
 
-<owl:NamedIndividual rdf:about="#LiquidityExercise2">
-  <rdf:type rdf:resource="#PracticeExercise"/>
-  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compute the quick ratio for a sample company.</description>
-</owl:NamedIndividual>
+  <ns1:Class rdf:about="#Quiz">
+    <ns2:label>Quiz</ns2:label>
+    <ns2:comment>Assessment component with questions testing financial analysis knowledge, concepts, and formulas.</ns2:comment>
+  </ns1:Class>
 
-<owl:NamedIndividual rdf:about="#ProfitabilityExercise1">
-  <rdf:type rdf:resource="#PracticeExercise"/>
-  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculate net profit margin using given financial statements.</description>
-</owl:NamedIndividual>
+  <!-- =====================================================
+       FINANCIAL STATEMENTS & COMPONENTS
+       ===================================================== -->
 
-<owl:NamedIndividual rdf:about="#DuPontExercise1">
-  <rdf:type rdf:resource="#PracticeExercise"/>
-  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Break down ROE into profit margin, asset turnover, and equity multiplier.</description>
-</owl:NamedIndividual>
+  <ns1:NamedIndividual rdf:about="#FinancialStatements">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Financial statements are structured reports that summarise the financial position, performance, and cash flows of an entity, usually through the balance sheet, income statement, and cash flow statement.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Financial statements provide a standardised language for communicating how a business is funded, how it invests in assets, how it generates profit, and how cash moves in and out of the firm. The balance sheet presents assets, liabilities, and equity at a point in time. The income statement shows how revenue is transformed into profit over a period. The cash flow statement reconciles opening and closing cash by classifying flows as operating, investing, or financing.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A company reports total assets of ₦10,000,000 and total liabilities of ₦6,000,000 on its balance sheet, implying equity of ₦4,000,000. The income statement shows revenue of ₦5,000,000 and expenses of ₦3,500,000, giving net income of ₦1,500,000. The cash flow statement explains how this profit, along with non-cash charges and financing transactions, leads to a change in the cash balance from ₦300,000 to ₦450,000.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#BalanceSheet" />
+    <ns3:relatedTo rdf:resource="#IncomeStatement" />
+    <ns3:relatedTo rdf:resource="#CashFlowStatement" />
+    <ns3:relatedTo rdf:resource="#RatioAnalysis" />
+    <ns3:hasQuiz rdf:resource="#FinancialStatementsQ1" />
+  </ns1:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#RetailChainExpansion">
-  <rdf:type rdf:resource="#CaseStudy"/>
-  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retail Chain Expansion</title>
-  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assess the financial viability of expansion plans using liquidity ratios.</description>
-</owl:NamedIndividual>
+  <ns1:NamedIndividual rdf:about="#BalanceSheet">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The balance sheet, or statement of financial position, reports a company&apos;s assets, liabilities, and equity at a specific date.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The balance sheet is organised around the accounting equation: Assets = Liabilities + Equity. Assets represent resources the entity controls, such as cash, receivables, inventory, property, and intangibles. Liabilities represent obligations to creditors. Equity represents residual interest after liabilities are deducted from assets. Analysts use the balance sheet to evaluate solvency, leverage, and the composition and quality of assets and funding.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A firm has cash of ₦500,000, inventory of ₦1,000,000, and property of ₦3,000,000, giving total assets of ₦4,500,000. It owes a bank ₦2,000,000 and suppliers ₦500,000, so liabilities total ₦2,500,000. Equity is therefore ₦2,000,000.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#FinancialStatements" />
+    <ns3:hasQuiz rdf:resource="#BalanceSheetQ1" />
+  </ns1:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#ManufacturingTurnaround">
-  <rdf:type rdf:resource="#CaseStudy"/>
-  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturing Company Turnaround</title>
-  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evaluate restructuring success through profitability and DuPont analysis.</description>
-</owl:NamedIndividual>
+  <ns1:NamedIndividual rdf:about="#IncomeStatement">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The income statement summarises a company&apos;s revenue, expenses, and resulting profit or loss over a reporting period.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The income statement explains performance by starting with revenue, subtracting cost of goods sold to obtain gross profit, then deducting operating expenses, interest, and taxes to arrive at net income. Key profitability indicators such as gross margin, operating margin, and net margin are derived from this statement. Net income links back to the balance sheet by increasing or decreasing retained earnings.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A business records sales of ₦5,000,000 and cost of goods sold of ₦3,000,000, giving gross profit of ₦2,000,000. Operating expenses of ₦500,000 and interest and tax of ₦300,000 lead to net income of ₦1,200,000. The net profit margin is 1,200,000 ÷ 5,000,000 = 24%.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#FinancialStatements" />
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:hasQuiz rdf:resource="#IncomeStatementQ1" />
+  </ns1:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#LiquidityQ1">
-  <rdf:type rdf:resource="#QuizQuestion"/>
-  <questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the formula for current ratio?</questionText>
-  <options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current Assets / Current Liabilities | Net Income / Total Assets | Cash / Debt</options>
-  <correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current Assets / Current Liabilities</correctAnswer>
-  <difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</difficulty>
-</owl:NamedIndividual>
+  <ns1:NamedIndividual rdf:about="#CashFlowStatement">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The cash flow statement reports cash inflows and outflows over a period, grouped into operating, investing, and financing activities.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Unlike the income statement, which uses accrual accounting, the cash flow statement tracks actual cash movements. Operating cash flows show whether the core business is generating cash. Investing cash flows show spending on and proceeds from long-term assets. Financing cash flows show how the business is funded or how capital is returned through debt repayment, dividends, or share buybacks. The sum of these sections explains the change in the cash balance between two balance sheet dates.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A company begins the year with ₦300,000 in cash and ends with ₦450,000. Operating activities generate ₦250,000, investing activities consume ₦100,000, and financing activities are neutral. The net increase of ₦150,000 reconciles opening to closing cash.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#FinancialStatements" />
+    <ns3:relatedTo rdf:resource="#LiquidityRatios" />
+    <ns3:hasQuiz rdf:resource="#CashFlowStatementQ1" />
+  </ns1:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#ProfitabilityQ1">
-  <rdf:type rdf:resource="#QuizQuestion"/>
-  <questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Net Profit Margin is calculated as?</questionText>
-  <options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Net Income / Revenue | Revenue / Total Assets | Operating Income / Equity</options>
-  <correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Net Income / Revenue</correctAnswer>
-  <difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</difficulty>
-</owl:NamedIndividual>
+  <!-- =====================================================
+       RATIO ANALYSIS & CATEGORIES
+       ===================================================== -->
 
-<owl:NamedIndividual rdf:about="#DuPontQ1">
-  <rdf:type rdf:resource="#QuizQuestion"/>
-  <questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROE in DuPont analysis is decomposed into which components?</questionText>
-  <options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profit Margin * Asset Turnover * Equity Multiplier | Revenue / Assets | Net Income / Debt</options>
-  <correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profit Margin * Asset Turnover * Equity Multiplier</correctAnswer>
-  <difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced</difficulty>
-</owl:NamedIndividual>
+  <ns1:NamedIndividual rdf:about="#RatioAnalysis">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Ratio analysis uses relationships between financial statement items to evaluate a company&apos;s performance, risk, and efficiency.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Ratios convert raw financial statement numbers into comparable indicators. Major categories include liquidity ratios (short-term solvency), profitability and return ratios (profit relative to sales, assets, and equity), leverage ratios (use of debt versus equity), asset utilisation ratios (efficiency of asset use), and growth ratios (change over time). Ratios are only meaningful when interpreted in context: time trends, budgets, and peer or industry benchmarks.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Using the same financial statements, an analyst might compute a current ratio of 2.0, a net profit margin of 15%, ROE of 18%, and a debt-to-equity ratio of 0.8. Together, these show moderate leverage, good profitability, and satisfactory liquidity.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#FinancialStatements" />
+    <ns3:relatedTo rdf:resource="#LiquidityRatios" />
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:relatedTo rdf:resource="#AssetUtilizationRatios" />
+    <ns3:relatedTo rdf:resource="#LeverageRatios" />
+    <ns3:relatedTo rdf:resource="#TrendAnalysis" />
+    <ns3:relatedTo rdf:resource="#Benchmarking" />
+    <ns3:hasQuiz rdf:resource="#RatioAnalysisQ1" />
+  </ns1:NamedIndividual>
 
+  <!-- Liquidity Ratios group -->
+  <ns1:NamedIndividual rdf:about="#LiquidityRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Liquidity ratios measure a company&apos;s capacity to meet its short-term obligations using its short-term assets and cash flows.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Liquidity ratios focus on the relationship between current assets and current liabilities and the coverage of interest obligations. Core measures include the current ratio and quick ratio, which compare current assets or quick assets to current liabilities, and coverage ratios such as EBITDA-to-interest. Low liquidity increases the risk of default, while excessively high liquidity may indicate idle or inefficiently used funds.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: If a company has current assets of ₦800,000 and current liabilities of ₦400,000, its current ratio is 2.0. If only ₦300,000 of those assets are cash, marketable securities, and receivables, the quick ratio is 300,000 ÷ 400,000 = 0.75, showing that inventory plays a major role in meeting obligations.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#RatioAnalysis" />
+    <ns3:relatedTo rdf:resource="#CurrentRatio" />
+    <ns3:relatedTo rdf:resource="#QuickRatio" />
+    <ns3:hasPractice rdf:resource="#LiquidityExercise1" />
+    <ns3:hasPractice rdf:resource="#LiquidityExercise2" />
+    <ns3:hasCaseStudy rdf:resource="#RetailChainExpansion" />
+    <ns3:hasQuiz rdf:resource="#LiquidityQ1" />
+    <ns3:hasQuiz rdf:resource="#LiquidityRatiosQ2" />
+  </ns1:NamedIndividual>
+
+  <!-- Current Ratio -->
+  <ns1:NamedIndividual rdf:about="#CurrentRatio">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The current ratio is a liquidity ratio that compares current assets to current liabilities.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Current Ratio = Current Assets ÷ Current Liabilities. It indicates how many units of current assets the firm has for each unit of current liabilities. Values above 1 suggest that short-term assets cover short-term obligations. However, if the ratio is extremely high, it may reflect excessive inventory or receivables rather than efficient cash management.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Current Assets = ₦900,000, Current Liabilities = ₦450,000. Current Ratio = 900,000 ÷ 450,000 = 2.0. The firm has two naira of current assets for every one naira of short-term liabilities.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#LiquidityRatios" />
+    <ns3:hasQuiz rdf:resource="#CurrentRatioQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Quick Ratio -->
+  <ns1:NamedIndividual rdf:about="#QuickRatio">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The quick ratio, or acid-test ratio, measures a firm&apos;s ability to meet short-term obligations using its most liquid assets.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Quick Ratio = (Cash + Marketable Securities + Accounts Receivable) ÷ Current Liabilities. It excludes inventory and other less liquid current assets because they may not be easily converted to cash in the short term. A quick ratio near or above 1 is usually considered healthy, but acceptable levels vary by industry.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Cash = ₦100,000, Marketable Securities = ₦50,000, Accounts Receivable = ₦150,000, Current Liabilities = ₦250,000. Quick Assets = 300,000. Quick Ratio = 300,000 ÷ 250,000 = 1.2, indicating the firm can cover current liabilities with liquid assets 1.2 times over.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#LiquidityRatios" />
+    <ns3:hasQuiz rdf:resource="#QuickRatioQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Profitability (overall concept) -->
+  <ns1:NamedIndividual rdf:about="#Profitability">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Profitability describes a firm&apos;s ability to generate income relative to revenue, assets, and equity.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Profitability is assessed using measures such as gross profit, operating profit, and net income, and by comparing these to sales (margins), assets (ROA), and equity (ROE). Sustainable profitability depends on pricing power, cost control, asset efficiency, and appropriate financing. Profitability analysis often distinguishes between operating performance and the effects of financing and tax decisions.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Two companies each report net income of ₦1,000,000, but one generates it from ₦5,000,000 of sales (20% margin) while the other generates it from ₦10,000,000 of sales (10% margin). The first firm is more profitable relative to sales even though absolute profit is the same.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:relatedTo rdf:resource="#ReturnOnEquity" />
+    <ns3:relatedTo rdf:resource="#ReturnOnAssets" />
+    <ns3:hasQuiz rdf:resource="#ProfitabilityIntroQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Profitability Ratios -->
+  <ns1:NamedIndividual rdf:about="#ProfitabilityRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Profitability ratios measure how efficiently a company converts revenue and assets into profit.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Common profitability ratios include gross profit margin (Gross Profit ÷ Revenue), operating margin (Operating Income ÷ Revenue), net profit margin (Net Income ÷ Revenue), return on assets (Net Income ÷ Average Assets), and return on equity (Net Income ÷ Average Equity). These ratios help identify whether profitability is driven more by pricing and cost structure, by asset productivity, or by financial leverage.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A firm with revenue of ₦8,000,000 and net income of ₦1,200,000 has a net profit margin of 1,200,000 ÷ 8,000,000 = 15%. If average assets are ₦10,000,000 and average equity is ₦6,000,000, then ROA is 12% and ROE is 20%.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#Profitability" />
+    <ns3:relatedTo rdf:resource="#IncomeStatement" />
+    <ns3:relatedTo rdf:resource="#ReturnOnEquity" />
+    <ns3:relatedTo rdf:resource="#ReturnOnAssets" />
+    <ns3:relatedTo rdf:resource="#ReturnRatios" />
+    <ns3:relatedTo rdf:resource="#ExpenseRatios" />
+    <ns3:hasPractice rdf:resource="#ProfitabilityExercise1" />
+    <ns3:hasCaseStudy rdf:resource="#ManufacturingTurnaround" />
+    <ns3:hasQuiz rdf:resource="#ProfitabilityQ1" />
+    <ns3:hasQuiz rdf:resource="#ProfitabilityRatiosQ2" />
+  </ns1:NamedIndividual>
+
+  <!-- Return Ratios (group) -->
+  <ns1:NamedIndividual rdf:about="#ReturnRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Return ratios compare profit to an investment base such as assets or equity to measure how effectively resources generate earnings.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Key return ratios are return on assets (ROA) and return on equity (ROE). ROA shows profit generated per unit of assets and is influenced by profit margin and asset turnover. ROE measures returns to shareholders and is affected by ROA and financial leverage. Decomposing ROE using the DuPont framework helps isolate the impact of margins, efficiency, and leverage.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Net Income = ₦2,000,000, Average Assets = ₦20,000,000, Average Equity = ₦8,000,000. ROA = 2,000,000 ÷ 20,000,000 = 10%; ROE = 2,000,000 ÷ 8,000,000 = 25%. The spread between ROA and ROE indicates that leverage is amplifying returns to equity holders.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:relatedTo rdf:resource="#ReturnOnAssets" />
+    <ns3:relatedTo rdf:resource="#ReturnOnEquity" />
+    <ns3:relatedTo rdf:resource="#DuPontAnalysis" />
+    <ns3:hasQuiz rdf:resource="#ReturnRatiosQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Expense Ratios -->
+  <ns1:NamedIndividual rdf:about="#ExpenseRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Expense ratios analyse operating costs such as selling, general, and administrative expenses relative to revenue.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      High expense ratios may indicate inefficient operations, poor cost control, or heavy investment in growth. By comparing expense categories to revenue and across time or peers, analysts can identify opportunities to improve margins. Expense ratios are often used together with tax and interest coverage ratios to separate operating performance from financing and tax effects.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A firm with revenue of ₦10,000,000 and SG&amp;A expenses of ₦2,000,000 has an SG&amp;A ratio of 2,000,000 ÷ 10,000,000 = 20%. If peers operate at 15%, there may be room to reduce overhead.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:hasQuiz rdf:resource="#ExpenseRatiosQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Tax & Interest Ratios -->
+  <ns1:NamedIndividual rdf:about="#TaxAndInterestRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Tax and interest ratios evaluate how interest and tax expenses affect earnings and the firm&apos;s ability to service debt.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Coverage ratios such as Interest Coverage (EBIT ÷ Interest Expense) and Fixed Charge Coverage indicate how comfortably a firm can meet its fixed financing commitments. Effective tax rate (Tax Expense ÷ Pre-tax Income) reveals the impact of tax planning, incentives, and jurisdictional mix. These ratios help separate operating performance from financing and tax effects when analysing profitability.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: EBIT = ₦3,000,000 and Interest Expense = ₦600,000 give an interest coverage ratio of 3,000,000 ÷ 600,000 = 5 times. Tax expense of ₦400,000 on pre-tax income of ₦2,400,000 yields an effective tax rate of 16.7%.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:relatedTo rdf:resource="#LeverageRatios" />
+    <ns3:hasQuiz rdf:resource="#TaxAndInterestRatiosQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Return on Equity -->
+  <ns1:NamedIndividual rdf:about="#ReturnOnEquity">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Return on equity (ROE) measures the rate of return earned on shareholders&apos; equity.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      ROE = Net Income ÷ Average Shareholders&apos; Equity. It captures how effectively management uses owners&apos; capital to generate profit. ROE can be decomposed using the DuPont framework into profit margin, asset turnover, and financial leverage: ROE = (Net Income ÷ Sales) × (Sales ÷ Assets) × (Assets ÷ Equity).
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Net Income = ₦2,000,000, Beginning Equity = ₦8,000,000, Ending Equity = ₦10,000,000. Average Equity = ₦9,000,000. ROE = 2,000,000 ÷ 9,000,000 ≈ 22.2%. If net margin is 15% and asset turnover is 1.3x, then the equity multiplier is roughly 1.14x, showing moderate leverage.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#Profitability" />
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:relatedTo rdf:resource="#ReturnRatios" />
+    <ns3:relatedTo rdf:resource="#DuPontAnalysis" />
+    <ns3:hasQuiz rdf:resource="#ROEQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Return on Assets -->
+  <ns1:NamedIndividual rdf:about="#ReturnOnAssets">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Return on assets (ROA) measures how efficiently a company uses its assets to generate profit.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      ROA = Net Income ÷ Average Total Assets. It indicates how many units of profit are produced per unit of assets. ROA is influenced by profit margin and asset turnover: ROA = (Net Income ÷ Sales) × (Sales ÷ Assets). It is especially useful for comparing firms in capital-intensive industries and for separating operating efficiency from leverage, since ROA is independent of capital structure.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Net Income = ₦1,500,000 and Average Assets = ₦15,000,000. ROA = 1,500,000 ÷ 15,000,000 = 10%. If the firm&apos;s asset turnover is 1.25x, its net profit margin is 8%.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#ProfitabilityRatios" />
+    <ns3:relatedTo rdf:resource="#ReturnRatios" />
+    <ns3:relatedTo rdf:resource="#DuPontAnalysis" />
+    <ns3:hasQuiz rdf:resource="#ROAQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Asset Utilization / Working Capital -->
+  <ns1:NamedIndividual rdf:about="#AssetUtilizationRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Asset utilisation ratios measure how efficiently a company uses its assets to generate sales and manage working capital.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      These ratios include total asset turnover (Sales ÷ Total Assets) and working capital-related turnover and days measures such as inventory turnover and days, receivables turnover and days, and payables turnover and days. Efficient asset utilisation balances sufficient investment in inventory and receivables to support sales against the cost of tying up capital.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Sales of ₦12,000,000 and average total assets of ₦6,000,000 give an asset turnover of 2.0x. Average inventory of ₦1,000,000 implies an inventory turnover of 12.0x and roughly 30 inventory days (365 ÷ 12).
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#RatioAnalysis" />
+    <ns3:relatedTo rdf:resource="#WorkingCapital" />
+    <ns3:hasQuiz rdf:resource="#AssetUtilizationQ1" />
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#WorkingCapital">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Working capital is the difference between current assets and current liabilities and represents the capital tied up in day-to-day operations.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net Working Capital = Current Assets − Current Liabilities. Adequate working capital ensures the firm can pay suppliers, employees, and other short-term obligations while funding inventory and receivables. Too little working capital creates liquidity risk; too much means capital is tied up in low-return assets. Working capital days metrics combine receivable, inventory, and payable days to show the cash conversion cycle.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Current Assets of ₦1,500,000 and Current Liabilities of ₦1,000,000 give net working capital of ₦500,000. If receivable days are 40, inventory days 30, and payable days 25, the cash conversion cycle is roughly 45 days.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#AssetUtilizationRatios" />
+    <ns3:relatedTo rdf:resource="#LiquidityRatios" />
+    <ns3:hasQuiz rdf:resource="#WorkingCapitalQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Leverage Ratios -->
+  <ns1:NamedIndividual rdf:about="#LeverageRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Leverage ratios assess how much debt a company uses relative to equity and its ability to service that debt.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Common leverage ratios include debt-to-equity, total liabilities-to-equity, debt-to-assets, and coverage ratios such as debt-to-EBITDA and EBITDA-to-interest. Moderate leverage can enhance returns to equity holders when returns on assets exceed the cost of debt. Excessive leverage magnifies downside risk and can lead to financial distress. Optimal leverage balances risk, return, industry norms, and access to capital.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A company with total debt of ₦12,000,000 and equity of ₦8,000,000 has a debt-to-equity ratio of 1.5x. If EBITDA is ₦5,000,000, then debt-to-EBITDA is 2.4x and interest coverage may be strong if interest expense is modest.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#RatioAnalysis" />
+    <ns3:relatedTo rdf:resource="#DebtToEquityRatio" />
+    <ns3:relatedTo rdf:resource="#TaxAndInterestRatios" />
+    <ns3:hasQuiz rdf:resource="#LeverageRatiosQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Debt-to-Equity Ratio -->
+  <ns1:NamedIndividual rdf:about="#DebtToEquityRatio">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The debt-to-equity ratio compares a company&apos;s total debt to its shareholders&apos; equity to measure financial leverage.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Debt-to-Equity = Total Debt ÷ Total Equity. A higher ratio indicates greater use of borrowed funds relative to owners&apos; capital. While leverage can amplify returns when the firm earns more than the cost of debt, it also increases fixed obligations and the risk of insolvency. Analysts compare this ratio to industry benchmarks and evaluate it together with coverage ratios and volatility of cash flows.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Total Debt = ₦12,000,000 and Total Equity = ₦8,000,000. Debt-to-Equity = 12,000,000 ÷ 8,000,000 = 1.5x, meaning the business uses ₦1.50 of debt for every ₦1 of equity.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#LeverageRatios" />
+    <ns3:relatedTo rdf:resource="#DuPontAnalysis" />
+    <ns3:hasQuiz rdf:resource="#DebtToEquityQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Trend (Horizontal) Analysis -->
+  <ns1:NamedIndividual rdf:about="#TrendAnalysis">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Trend, or horizontal, analysis compares financial statement items across multiple periods to identify growth patterns and structural changes.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      In trend analysis, each year&apos;s figure is expressed as a percentage or index relative to a base year. Analysts examine how revenue, expenses, assets, and key ratios evolve over time to detect acceleration, deceleration, or instability. Combining trend analysis with leverage and profitability measures helps evaluate the sustainability of growth and the impact of financial strategy.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: If revenue is ₦5m, ₦6m, and ₦7.2m over three years, revenue has grown 20% then 20%, creating a simple upward trend. If debt grows much faster than equity in the same period, the analyst might question whether growth is being funded safely.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#RatioAnalysis" />
+    <ns3:relatedTo rdf:resource="#GrowthRatios" />
+    <ns3:hasQuiz rdf:resource="#TrendAnalysisQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Growth Ratios -->
+  <ns1:NamedIndividual rdf:about="#GrowthRatios">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Growth ratios measure the rate at which key financial metrics such as revenue, earnings, and cash flow increase over time.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Common growth measures include year-over-year and compound annual growth rates (CAGR) for revenue, EBITDA, and net income. Combining growth ratios with leverage and profitability helps determine whether growth is value-creating or simply driven by borrowing or margin compression. Analysts also relate growth to operating and financial leverage to understand sensitivity of earnings to changes in sales.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: Earnings grow from ₦1,000,000 to ₦1,331,000 over three years. The compound annual growth rate is approximately 10% per year.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#TrendAnalysis" />
+    <ns3:relatedTo rdf:resource="#LeverageRatios" />
+    <ns3:hasQuiz rdf:resource="#GrowthRatiosQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- Benchmarking -->
+  <ns1:NamedIndividual rdf:about="#Benchmarking">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Benchmarking compares a company&apos;s financial ratios and performance metrics against peers, industry averages, or best-in-class firms.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Effective benchmarking begins with carefully selecting relevant peers based on size, business model, and geography. Analysts compare profitability, leverage, liquidity, growth, and efficiency ratios, looking for areas where the firm outperforms or underperforms. Benchmarking provides context for interpreting ratios and can reveal strategic or operational gaps that internal analysis alone might miss.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: If an analysed retailer has a net margin of 4% while peer retailers average 7%, but asset turnover is higher than peers, management may focus on pricing or cost structure rather than sales volume.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#RatioAnalysis" />
+    <ns3:relatedTo rdf:resource="#DuPontAnalysis" />
+    <ns3:hasQuiz rdf:resource="#BenchmarkingQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- DuPont / Pyramid Analysis -->
+  <ns1:NamedIndividual rdf:about="#DuPontAnalysis">
+    <rdf:type rdf:resource="#Concept" />
+    <ns3:hasDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      DuPont analysis decomposes return on equity into profit margin, asset turnover, and leverage components to explain what drives shareholder returns.
+    </ns3:hasDefinition>
+    <ns3:hasTheory rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      In its three-step form, DuPont analysis expresses ROE as: ROE = (Net Income ÷ Sales) × (Sales ÷ Assets) × (Assets ÷ Equity). This &quot;pyramid&quot; shows how profitability, efficiency, and leverage interact. Extensions break margin and turnover into further sub-ratios. Comparing DuPont components over time or across peers clarifies why ROE differs and which lever—margin improvement, better asset utilisation, or capital structure change—might enhance value.
+    </ns3:hasTheory>
+    <ns3:hasExample rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Example: A retailer has net margin of 5%, asset turnover of 2.0x, and equity multiplier of 1.5x. ROE = 5% × 2.0 × 1.5 = 15%. Another retailer may achieve the same ROE with higher margin but lower turnover, suggesting a different strategy.
+    </ns3:hasExample>
+    <ns3:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced</ns3:hasLevel>
+    <ns3:relatedTo rdf:resource="#ReturnRatios" />
+    <ns3:relatedTo rdf:resource="#ReturnOnEquity" />
+    <ns3:relatedTo rdf:resource="#ReturnOnAssets" />
+    <ns3:relatedTo rdf:resource="#LeverageRatios" />
+    <ns3:hasPractice rdf:resource="#DuPontExercise1" />
+    <ns3:hasCaseStudy rdf:resource="#ManufacturingTurnaround" />
+    <ns3:hasQuiz rdf:resource="#DuPontQ1" />
+  </ns1:NamedIndividual>
+
+  <!-- =====================================================
+       PRACTICE EXERCISES
+       ===================================================== -->
+
+  <ns1:NamedIndividual rdf:about="#LiquidityExercise1">
+    <rdf:type rdf:resource="#PracticeExercise" />
+    <ns3:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Given a simplified balance sheet, compute the current ratio and interpret whether liquidity appears strong or weak compared with a target of 1.5x.
+    </ns3:description>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#LiquidityExercise2">
+    <rdf:type rdf:resource="#PracticeExercise" />
+    <ns3:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Using data for cash, marketable securities, receivables, and current liabilities, calculate the quick ratio for two companies and compare their ability to meet obligations without relying on inventory.
+    </ns3:description>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#ProfitabilityExercise1">
+    <rdf:type rdf:resource="#PracticeExercise" />
+    <ns3:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      From a multi-step income statement and balance sheet, compute gross margin, operating margin, net margin, ROA, and ROE, and explain which drivers are strongest.
+    </ns3:description>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#DuPontExercise1">
+    <rdf:type rdf:resource="#PracticeExercise" />
+    <ns3:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Break down ROE into profit margin, asset turnover, and equity multiplier for three retailers and discuss how different combinations of margin, efficiency, and leverage produce similar or different ROE outcomes.
+    </ns3:description>
+  </ns1:NamedIndividual>
+
+  <!-- =====================================================
+       CASE STUDIES
+       ===================================================== -->
+
+  <ns1:NamedIndividual rdf:about="#RetailChainExpansion">
+    <rdf:type rdf:resource="#CaseStudy" />
+    <ns3:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retail Chain Expansion</ns3:title>
+    <ns3:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      A regional retailer is considering opening ten new stores. Using liquidity and working capital ratios, assess whether the company has sufficient short-term capacity to support increased inventory and receivables without risking cash shortages.
+    </ns3:description>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#ManufacturingTurnaround">
+    <rdf:type rdf:resource="#CaseStudy" />
+    <ns3:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturing Company Turnaround</ns3:title>
+    <ns3:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      A manufacturing firm has improved profitability after restructuring. Using profitability ratios and DuPont analysis, evaluate how margin, asset turnover, and leverage changed before and after the turnaround and whether the new capital structure is sustainable.
+    </ns3:description>
+  </ns1:NamedIndividual>
+
+  <!-- =====================================================
+       QUIZ QUESTIONS
+       (Existing + many new ones so every major concept has a quiz)
+       ===================================================== -->
+
+  <!-- Financial statements group -->
+  <ns1:NamedIndividual rdf:about="#FinancialStatementsQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which combination lists the three primary financial statements?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Balance Sheet, Income Statement, Cash Flow Statement |
+      Cash Flow Statement, Budget, Trial Balance |
+      Balance Sheet, Cash Book, General Journal
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Balance Sheet, Income Statement, Cash Flow Statement
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#BalanceSheetQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which equation best describes the structure of the balance sheet?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Assets = Liabilities + Equity |
+      Assets = Revenue + Expenses |
+      Cash = Profit − Depreciation
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Assets = Liabilities + Equity
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#IncomeStatementQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net profit on the income statement is calculated as:
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Revenue − Cost of Goods Sold |
+      Revenue − All expenses including interest and tax |
+      Assets − Liabilities
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Revenue − All expenses including interest and tax
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#CashFlowStatementQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which section of the cash flow statement shows cash generated by the core business?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Operating activities |
+      Investing activities |
+      Financing activities
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Operating activities
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <!-- Ratio analysis + liquidity -->
+  <ns1:NamedIndividual rdf:about="#RatioAnalysisQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      What is the main purpose of ratio analysis?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      To eliminate the need for financial statements |
+      To compare financial performance across time and against peers using standardised measures |
+      To record every transaction in detail |
+      To calculate tax liabilities only
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      To compare financial performance across time and against peers using standardised measures
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#LiquidityQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which formula correctly defines the current ratio?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Current Assets / Current Liabilities | Net Income / Total Assets | Cash / Total Debt
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Current Assets / Current Liabilities
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#LiquidityRatiosQ2">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Why might an extremely high current ratio be a warning sign rather than a strength?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      It always means the company is insolvent |
+      It may indicate too much capital tied up in low-yield current assets |
+      It shows that liabilities are understated |
+      It means the company has no inventory
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      It may indicate too much capital tied up in low-yield current assets
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#CurrentRatioQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      If a firm has current assets of ₦600,000 and current liabilities of ₦400,000, what is its current ratio?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      0.67x | 1.0x | 1.5x | 2.0x
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      1.5x
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#QuickRatioQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which items are typically included in the numerator of the quick ratio?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Cash, marketable securities, accounts receivable |
+      Cash, inventory, prepaid expenses |
+      Inventory only |
+      Fixed assets only
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Cash, marketable securities, accounts receivable
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <!-- Profitability quizzes -->
+  <ns1:NamedIndividual rdf:about="#ProfitabilityIntroQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which ratio best measures profit generated per naira of sales?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Current ratio | Net profit margin | Debt-to-equity | Inventory turnover
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net profit margin
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beginner</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#ProfitabilityQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net profit margin is calculated as:
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net Income / Revenue | Revenue / Total Assets | Operating Income / Equity
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net Income / Revenue
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Intermediate
+    </ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#ProfitabilityRatiosQ2">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      A company has net income of ₦1,200,000 and average equity of ₦6,000,000. What is ROE?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      2% | 5% | 10% | 20%
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      20%
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#ReturnRatiosQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which pair of ratios is most directly classified as return ratios?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Current ratio and quick ratio |
+      ROA and ROE |
+      Debt-to-equity and interest coverage |
+      Inventory turnover and receivable days
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      ROA and ROE
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#ExpenseRatiosQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      If SG&amp;A expenses are ₦1,500,000 and revenue is ₦10,000,000, what is the SG&amp;A ratio?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      5% | 10% | 15% | 25%
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      15%
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#TaxAndInterestRatiosQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      An interest coverage ratio of 1.0x usually indicates that:
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      EBIT equals interest expense |
+      EBIT is twice interest expense |
+      There is no interest expense |
+      EBIT is negative
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      EBIT equals interest expense
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <!-- ROE / ROA -->
+  <ns1:NamedIndividual rdf:about="#ROEQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      ROE primarily answers which question?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      How much profit is generated per naira of total assets? |
+      How effectively is equity capital generating profit? |
+      How quickly customers pay their invoices? |
+      How much of sales are credit sales?
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      How effectively is equity capital generating profit?
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#ROAQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      ROA can be expressed as the product of which two components in the DuPont framework?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net profit margin and asset turnover |
+      Gross margin and current ratio |
+      Debt-to-equity and interest coverage |
+      Inventory turnover and receivable days
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net profit margin and asset turnover
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <!-- Asset utilisation / working capital -->
+  <ns1:NamedIndividual rdf:about="#AssetUtilizationQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Asset turnover is calculated as:
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Sales / Total Assets | Total Assets / Sales | Sales / Equity | Net Income / Total Assets
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Sales / Total Assets
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#WorkingCapitalQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Net working capital is defined as:
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Total assets − total liabilities |
+      Current assets − current liabilities |
+      Revenue − expenses |
+      Equity − debt
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Current assets − current liabilities
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <!-- Leverage / Debt -->
+  <ns1:NamedIndividual rdf:about="#LeverageRatiosQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      What does a high debt-to-equity ratio generally indicate?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The firm is entirely equity financed |
+      The firm has low financial risk |
+      The firm relies more on borrowed funds relative to owners&apos; capital |
+      The firm has no interest expense
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      The firm relies more on borrowed funds relative to owners&apos; capital
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#DebtToEquityQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      If total debt is ₦12,000,000 and total equity is ₦6,000,000, what is the debt-to-equity ratio?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      0.5x | 1.0x | 1.5x | 2.0x
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      2.0x
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermediate</ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <!-- Trend / Growth / Benchmarking -->
+  <ns1:NamedIndividual rdf:about="#TrendAnalysisQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      What does horizontal (trend) analysis primarily focus on?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Comparing a company to competitors at a single point in time |
+      Evaluating changes in financial statement items over several periods |
+      Converting financial statements into common-size percentages for one year |
+      Replacing the need for ratio analysis
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Evaluating changes in financial statement items over several periods
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Intermediate
+    </ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#GrowthRatiosQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Which measure best captures the average annual rate of growth over multiple years?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Year-over-year change |
+      Compound annual growth rate (CAGR) |
+      Current ratio |
+      Net profit margin
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Compound annual growth rate (CAGR)
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Intermediate
+    </ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <ns1:NamedIndividual rdf:about="#BenchmarkingQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Why is peer group selection critical in financial benchmarking?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Because it determines the company&apos;s tax rate |
+      Because inappropriate peers can lead to misleading conclusions about performance |
+      Because only identical companies can be compared |
+      Because it changes how ratios are calculated
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Because inappropriate peers can lead to misleading conclusions about performance
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Intermediate
+    </ns3:difficulty>
+  </ns1:NamedIndividual>
+
+  <!-- DuPont existing quiz -->
+  <ns1:NamedIndividual rdf:about="#DuPontQ1">
+    <rdf:type rdf:resource="#QuizQuestion" />
+    <ns3:questionText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      In the three-step DuPont model, ROE is decomposed into which components?
+    </ns3:questionText>
+    <ns3:options rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Profit Margin × Asset Turnover × Equity Multiplier | Revenue / Assets | Net Income / Total Debt
+    </ns3:options>
+    <ns3:correctAnswer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Profit Margin × Asset Turnover × Equity Multiplier
+    </ns3:correctAnswer>
+    <ns3:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Advanced
+    </ns3:difficulty>
+  </ns1:NamedIndividual>
 
 </rdf:RDF>
